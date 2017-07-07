@@ -1,0 +1,54 @@
+Developing Data Products Coursera Project Assignment
+========================================================
+author: kkw,
+date: 7-7-2017,
+autosize: true
+
+
+
+
+Introduction
+========================================================
+
+This presentation gives a brief overview of the shiny application created for the Data Product Coursera Project Assignment
+
+The app makes it easy for the user to have a quick overview of the data in the mtcars data set by visualizing the different predictors in relation to the MPG. 
+
+The mtcars dataset has 32 entries with 11 columns. The milage (mgp) variation summary is as follows:
+
+``` {r summary, echo=FALSE}
+summary(mtcars$mpg)
+```
+
+
+Project details
+========================================================
+
+A simple Shiny application has been build and published to generate the linear regression between two variables of the "mtcars" dataset. 
+
+You can view the application at:
+
+- shiny server link: 
+- git-hub link: 
+
+For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.
+
+How it works:
+========================================================
+
+
+- Choose a variable to use for predictor
+- Choose an other variable tha you want to to be grouped
+- Choose whether or not you want to the see the linear regression line
+
+Example of plot with regression line
+========================================================
+
+
+```{r example, echo=FALSE}
+library(ggplot2)
+qplot(mtcars$drat,mtcars$mpg,color=mtcars$am,colours="Blues")+geom_smooth(method="lm")
+```
+
+
+
